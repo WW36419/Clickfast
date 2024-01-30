@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clickfast!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="menu">
+            <h1>Clickfast</h1>
+            <div id="desc"></div>
+            
+            <form>
+                <fieldset>
+                    <legend id="legend">Opcje</legend>
+                    <div><label><div id="timeTxt"></div>
+                        <input type="number" name="time" id="time" onchange="timeChange()" min="5" max="300">
+                    </label></div>
+                    <div><label><div id="langTxt"></div>
+                        <input type="button" name="language" id="lang" onclick="langChange()">
+                    </label></div>
+                    <div><label><div id="styleTxt"></div>
+                        <input type="button" name="style" id="style" onclick="styleChange()">
+                    </label></div>
+                </fieldset>
+            </form>
+            <div id="prompt"></div>
+        </div>
+        
+        <div id="block" onclick="clicked()"></div>
+        <div id="text"></div>
+        <input type="button" name="restart" id="restart" onclick="location.reload()" value="Restart">
+
+        <script src="jquery-3.2.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
